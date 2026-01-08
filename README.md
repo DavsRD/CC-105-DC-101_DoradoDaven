@@ -15,7 +15,7 @@ FoundIt! is a web-based system designed to centralize the process of posting and
 ## Database Design
 The schema uses a normalized 3-table structure (Categories, Items, and Claims) to ensure data integrity.
 
-> **[PLACEHOLDER: Insert ER Diagram Image Here - Figure 1]**
+> ![Database Schema](Screenshots/ER.png)
 
 ### Relationships
 * **Categories to Items:** One-to-Many; one category covers multiple items.
