@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoundIt!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lists-panel.css">
+    <link rel="stylesheet" href="archive-panel.css">
+    <link rel="stylesheet" href="mobile.css">
+    <link rel="stylesheet" href="menu.css">
+    <script src="menu-script.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>FoundIt!</h1>
+            <h3>Your Campus-wide Lost and Found Hub</h3>
+        </header>
+
+        <main>
+            <aside>
+                <button class="sidebar-button" onclick="showForm('found')">Post Found Item</button>
+
+                <div class="form-area">
+                    <div id="found-form" class="form-content">
+                        <h3>Post Found Item</h3>
+                        <form onsubmit="submitItem(event)" class="scrollable-form">
+                            <div class="form-group">
+                                <label>Item Title</label>
+                                <input type="text" name="item_title" required placeholder="e.g., Blue Hydroflask">
+                            </div>
+                            <div class="form-group">
+                                <label>Category</label>
+                                <select name="category" required>
+                                    <option value="">Select category...</option>
+                                    <option value="1">Electronic Devices</option>
+                                    <option value="2">Personal Belongings</option>
+                                    <option value="3">Keys</option>
+                                    <option value="4">Books & Papers</option>
+                                    <option value="5">Clothes</option>
+                                    <option value="6">Accessories</option>
+                                    <option value="7">Others</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Location Found</label>
+                                <select name="location" required>
+                                    <option value="">Select location...</option>
+                                    <option value="Lobby">Lobby</option>
+                                    <option value="Administrative Blg">Administrative Blg</option>
+                                    <option value="Bridge">Bridge</option>
+                                    <option value="CCS Blg">CCS Blg</option>
+                                    <option value="CBA Blg">CBA Blg</option>
+                                    <option value="CCA Blg">CCA Blg</option>
+                                    <option value="CON Blg">CON Blg</option>
+                                    <option value="Registrar">Registrar</option>
+                                    <option value="Multi-purpose Blg">Multi-purpose Blg</option>
+                                    <option value="Library">Library</option>
+                                    <option value="Canteen">Canteen</option>
+                                    <option value="Outside">Outside</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Description</label>
+                                <textarea name="description" required placeholder="Describe the item..."></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Photo (optional)</label>
+                                <input type="file" name="photo" accept="image/*" onchange="previewPhoto(event)">
+                                <img class="photo-preview" id="found-preview" alt="Preview">
+                            </div>
+                            <button type="submit" class="submit-btn">Submit Found Item</button>
+                        </form>
+                    </div>
+                </div>
+
+                <button class="sidebar-button" onclick="showArchive()">Archive</button>
+            </aside>
+
+            <div class="mainpanel">
+                <div class="found-panel">
+                    <section>
+                        <div>
+                            <h2>Found Items</h2>
+                            <div id="found-list">
+                                <div class="no-items-found">
+                                    <p>No found items posted yet.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="archive-panel">
+                    <section class="archive">
+                        <div>
+                            <h2>Archived Items</h2>
+                            <div id="archive-list">
+                                <div class="no-items-archive">
+                                    <p>No archived items yet.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2025 FoundIt! All Rights Reserved</p>
+        </footer>
+    </div>
+
+    <!-- Mobile Modal for Form -->
+    <div id="mobile-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <div id="modal-form-container"></div>
+        </div>
+    </div>
+
+    <!-- Claim Modal -->
+    <div id="claim-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeClaimModal()">&times;</span>
+            <h3>Claim This Item</h3>
+            <form id="claim-form" onsubmit="submitClaim(event)">
+                <div class="form-group">
+                    <label>Student Name</label>
+                    <input type="text" name="student_name" required>
+                </div>
+                <div class="form-group">
+                    <label>Student Number</label>
+                    <input type="text" name="student_id" required pattern="\d{5}-\d{2}-\d{4}" placeholder="00000-00-0000">
+                </div>
+                <div class="form-group">
+                    <label>Course & Section</label>
+                    <input type="text" name="student_course" required placeholder="e.g., BSCS 3-1">
+                </div>
+                <button type="submit" class="submit-btn">Confirm Claim</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

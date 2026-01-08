@@ -1,0 +1,164 @@
+        .scrollable-form {
+        
+        padding-right: 10px;
+    }
+    
+    .sidebar-button {
+        background: rgba(255, 255, 255, 0.2);
+        border: none;
+        color: white;
+        padding: 15px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: bold;
+        transition: background 0.3s;
+    }
+
+    .sidebar-button:hover {
+        background: rgba(255, 255, 255, 0.3);
+    }
+
+    .sidebar-button.active {
+        background: rgba(255, 255, 255, 0.4);
+    }
+
+   .form-area {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    height: calc(100vh - 400px);
+    min-height: 400px;
+    overflow-y: auto;
+}
+
+    .form-content {
+        display: none;
+    }
+
+    .form-content.active {
+        display: block;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .form-group select,
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        padding: 8px;
+        border: none;
+        border-radius: 4px;
+        font-family: inherit;
+    }
+
+    .form-group textarea {
+        resize: vertical;
+        min-height: 80px;
+    }
+
+    .photo-preview {
+        margin-top: 10px;
+        max-width: 100%;
+        max-height: 150px;
+        border-radius: 4px;
+        display: none;
+    }
+
+    .photo-preview.show {
+        display: block;
+    }
+
+    .submit-btn {
+        background: #00a8ff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .submit-btn:hover {
+        background: #0096e6;
+    }
+
+    .item-card {
+        background: rgba(255, 255, 255, 0.9);
+        padding: 15px;
+        border-radius: 8px;
+        color: #333;
+    }
+
+    .item-card h4 {
+        color: #08738a;
+        margin-bottom: 8px;
+    }
+
+    .item-card p {
+        margin: 5px 0;
+        font-size: 0.9rem;
+    }
+
+    .item-card img {
+        max-width: 100%;
+        max-height: 200px;
+        border-radius: 4px;
+        margin-top: 10px;
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        overflow-y: auto;
+    }
+
+    .modal.active {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modal-content {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 500px;
+        width: 90%;
+        max-height: 90vh;
+        overflow-y: auto;
+        position: relative;
+    }
+
+    .modal-close {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 28px;
+        cursor: pointer;
+        color: #666;
+    }
+
+    .modal-close:hover {
+        color: #000;
+    }
+
+    .modal .form-group label {
+        color: #333;
+    }

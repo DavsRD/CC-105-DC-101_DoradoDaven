@@ -1,0 +1,95 @@
+.archive-panel {
+    display: none;
+}
+
+.archive-panel section {
+    padding: 20px;
+}
+
+.archive-panel h2 {
+    color: #08738a;
+    margin-bottom: 15px;
+}
+
+/* Reuse the same styling from lists-panel but ensure it's scoped */
+.archive-panel .item-card {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 12px;
+    border-radius: 8px;
+    color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.342);
+    transition: transform 0.2s ease;
+}
+
+.archive-panel .item-card:hover {
+    transform: translateY(-4px);
+}
+
+.archive-panel .item-photo {
+    flex-shrink: 0;
+    width: 150px;
+    height: 150px;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #08738a;
+}
+
+.archive-panel .item-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.archive-panel .item-details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.archive-panel .item-details h4 {
+    margin: 0;
+    color: #08738a;
+    font-size: 1.1rem;
+}
+
+.archive-panel .item-details h5,
+.archive-panel .item-details h6 {
+    margin: 0;
+    color: #08738a;
+    font-size: 1rem;
+}
+
+.archive-panel .item-details p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.archive-panel .student-dropdown {
+    margin-top: 8px;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease;
+}
+
+.archive-panel .item-card:hover .student-dropdown {
+    max-height: 200px;
+}
+
+.archive-panel .student-info {
+    background: rgba(8, 115, 138, 0.1);
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+.archive-panel .student-info p {
+    margin: 3px 0;
+    font-size: 0.85rem;
+    color: #333;
+}

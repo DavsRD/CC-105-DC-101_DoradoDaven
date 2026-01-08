@@ -1,0 +1,70 @@
+@media (max-width: 768px) {
+        main {
+            grid-template-columns: 1fr;
+            min-height: auto;
+        }
+
+        .lists-panel {
+        display: grid;
+        grid-template-columns: 1fr; /* Change from 1fr 1fr to just 1fr */
+        }
+
+        aside {
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 10px;
+            height: 70px;
+            gap: 10px;
+        }
+
+        .sidebar-button {
+            flex: 1;
+            padding: 10px;
+            font-size: 0.85rem;
+        }
+
+        .form-area {
+            display: none;
+        }
+
+        .mainpanel {
+            grid-template-columns: 1fr;
+            min-height: 70vh;
+        }
+
+        #lost-list,#found-list {
+            height: 350px;
+        }
+
+        .item-photo {
+            flex-shrink: 0; /* Prevents the image from getting squished */
+            width: 100px;
+            height: 100px;
+            border-radius: 6px;
+            overflow: hidden;
+            background-color: #08738a; /* Placeholder color if no image exists */
+        }
+
+        .item-details h4 {
+            margin: 0;
+            color: #08738a;
+            font-size: 1.rem;
+            padding-bottom: 0;
+        }
+
+        .item-details h5, h6 {
+            margin: 0;
+            color: #08738a;
+            font-size: 0.8rem;
+        }
+
+        .item-details p {
+            margin: 0;
+            font-size: 0.7rem;
+            color: #666;
+        }
+
+    }
+
+    
