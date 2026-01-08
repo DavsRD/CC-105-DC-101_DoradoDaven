@@ -1,42 +1,47 @@
 # FoundIt! : Your Campus-Wide Lost & Found
-[cite_start]**A Campus-Based Lost and Found Management System** [cite: 22]
+**A Campus-Based Lost and Found Management System** 
 
 ## Introduction
-[cite_start]FoundIt! is a web-based system designed to centralize the process of posting and claiming found items on campus[cite: 23, 24]. [cite_start]It replaces disorganized manual methods with a digital database to ensure lost property is returned to rightful owners through "Active" and "Archive" listings[cite: 24, 25].
+FoundIt! is a web-based system designed to centralize the process of posting and claiming found items on campus. It replaces disorganized manual methods with a digital database to ensure lost property is returned to rightful owners through "Active" and "Archive" listings.
 
 ### Technologies Used
-* [cite_start]**Front-End:** HTML5, CSS3, Vanilla JavaScript [cite: 26]
-* [cite_start]**Back-End:** PHP, PDO (PHP Data Objects) [cite: 26]
-* [cite_start]**Database:** MySQL [cite: 26]
-* [cite_start]**Tools:** XAMPP, phpMyAdmin, VS Code [cite: 26]
+* **Front-End:** HTML5, CSS3, Vanilla JavaScript
+* **Back-End:** PHP, PDO (PHP Data Objects)
+* **Database:** MySQL 
+* **Tools:** XAMPP, phpMyAdmin, VS Code 
 
 ---
 
 ## Database Design
-[cite_start]The schema uses a normalized 3-table structure (Categories, Items, and Claims) to ensure data integrity[cite: 28].
+The schema uses a normalized 3-table structure (Categories, Items, and Claims) to ensure data integrity.
 
-> [cite_start]**[PLACEHOLDER: Insert ER Diagram Image Here - Figure 1]** [cite: 27]
+> **[PLACEHOLDER: Insert ER Diagram Image Here - Figure 1]**
 
 ### Relationships
-* [cite_start]**Categories to Items:** One-to-Many; one category covers multiple items[cite: 29].
-* [cite_start]**Items to Claims:** One-to-Zero-or-One; items stay 'active' until a single claim record is linked via a Unique Foreign Key[cite: 30, 31, 32].
+* **Categories to Items:** One-to-Many; one category covers multiple items.
+* **Items to Claims:** One-to-Zero-or-One; items stay 'active' until a single claim record is linked via a Unique Foreign Key.
 
 ---
 
 ## Web Interface & Functionalities
-[cite_start]The system features a responsive GUI that adapts to both desktop and mobile views[cite: 34, 39].
+The system features a responsive GUI that adapts to both desktop and mobile views.
 
-* [cite_start]**Posting Form:** Allows users to upload item titles, locations, descriptions, and photos[cite: 35].
-* [cite_start]**Found Items Panel:** A real-time list fetching "active" items as cards[cite: 36].
-* [cite_start]**Claim System:** A modal pop-up that captures claimant details and triggers a database transaction to archive the item[cite: 37].
-* [cite_start]**Archive:** Stores the history of claimed items and claimant information[cite: 38].
+* **Posting Form:** Allows users to upload item titles, locations, descriptions, and photos.
+* **Found Items Panel:** A real-time list fetching "active" items as cards.
+* **Claim System:** A modal pop-up that captures claimant details and triggers a database transaction to archive the item.
+* **Archive:** Stores the history of claimed items and claimant information.
 
-> **[PLACEHOLDER: Insert Interface Screenshots Here - Figures 2 to 7]**
+> **![Main Dashboard](Screenshots/Picture1.png)**
+> **![Posting Form](Screenshots/Picture2.png)**
+> **![Found List](Screenshots/Picture3.png)**
+> **![Claim Modal](Screenshots/Picture4.png)**
+> **![Archive Panel](Screenshots/Picture5.png)**
+> **![Mobile View](Screenshots/Picture3.png)**
 
 ---
 
 ## Challenges and Learning
-* [cite_start]**Normalization:** Transitioning to a three-table model and managing Foreign Key constraints (like `ON DELETE CASCADE`) was a significant hurdle[cite: 39].
-* [cite_start]**Pathing & Caching:** Debugging 404 errors for images taught me the nuances of absolute vs. relative paths in PHP[cite: 40].
-* [cite_start]**Full-Stack Integration:** Gained insight into using JavaScript fetch requests to bridge the UI and MySQL via PHP[cite: 41].
-* [cite_start]**UI/UX Precision:** Learned modern styling techniques like `object-fit: cover` to ensure consistent image rendering[cite: 42].
+* **Normalization:** Transitioning to a three-table model and managing Foreign Key constraints (like `ON DELETE CASCADE`) was a significant hurdle.
+* **Pathing & Caching:** Debugging 404 errors for images taught me the nuances of absolute vs. relative paths in PHP.
+* **Full-Stack Integration:** Gained insight into using JavaScript fetch requests to bridge the UI and MySQL via PHP.
+* **UI/UX Precision:** Learned modern styling techniques like `object-fit: cover` to ensure consistent image rendering.
